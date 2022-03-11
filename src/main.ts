@@ -13,3 +13,13 @@ console.log(teamOneMinus)
 console.log(teamOneScore)
 console.log(teamOneNameDisplay)
 console.log(teamOneNameInput)
+
+function handleClickTeamOnePlusButton() {
+  console.log('clicked team one plus button')
+}
+teamOnePlus?.addEventListener('click', handleClickTeamOnePlusButton)
+
+function handleClickTeamOneMinusButton() {
+  console.log('clicked team one minus button')
+}
+teamOneMinus?.addEventListener('click', handleClickTeamOneMinusButton)
