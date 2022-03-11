@@ -15,9 +15,11 @@ body {
 }
 
 h1 {
+  /* font-family: 'Homemade Apple', cursive; */
   text-align: center;
-  font-family: Monospace;
+  font-family: 'Syne Mono', monospace;
   margin: 1rem 0 3rem 0;
+  font-size: 70px;
 }
 
 main {
@@ -43,8 +45,9 @@ section h2,
 section p {
   text-align: center;
   color: #d52f2f;
-  /* font-family: 'Caveat', cursive; */
-  text-decoration: underline;
+  font-family: 'Caveat', cursive;
+  /* text-decoration: underline; */
+  font-size: 60px;
 }
 
 section h3 {

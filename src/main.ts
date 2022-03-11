@@ -25,6 +25,11 @@ function handleClickTeamOnePlusButton() {
 teamOnePlus?.addEventListener('click', handleClickTeamOnePlusButton)
 
 function handleClickTeamOneMinusButton() {
+  // Guard Clause to protect code below
+  if (teamOneScore === 0) {
+    return
+  }
+
   teamOneScore--
 
   if (teamOneScoreText) {
