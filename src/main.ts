@@ -18,12 +18,18 @@ console.log(teamOneNameInput)
 function handleClickTeamOnePlusButton() {
   teamOneScore++
 
-  console.log(teamOneScore)
+  if (teamOneScoreText) {
+    teamOneScoreText.textContent = `${teamOneScore}`
+  }
 }
 teamOnePlus?.addEventListener('click', handleClickTeamOnePlusButton)
 
 function handleClickTeamOneMinusButton() {
   teamOneScore--
+
+  if (teamOneScoreText) {
+    teamOneScoreText.textContent = `${teamOneScore}`
+  }
   console.log(teamOneScore)
 }
 teamOneMinus?.addEventListener('click', handleClickTeamOneMinusButton)
