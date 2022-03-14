@@ -27,6 +27,10 @@ function handleClickTeamOnePlusButton() {
     return
   }
 
+  if (teamOneScore >= 21) {
+    window.alert('Winner winner chicken dinner!')
+  }
+
   if (teamOneScoreText) {
     teamOneScoreText.textContent = `${teamOneScore}`
   }
@@ -68,8 +72,12 @@ teamOneNameInput?.addEventListener('input', teamOneInputChanged)
 // ------------------------------------------TEAM 2 BUTTON FUNCTION------------------------------------------
 
 function handleClickTeamTwoPlusButton() {
-  if (teamTwoScore >= 21) {
+  if (teamTwoScore > 21) {
     return
+  }
+
+  if (teamTwoScore >= 21) {
+    window.alert('Winner winner chicken dinner!')
   }
 
   teamTwoScore++
