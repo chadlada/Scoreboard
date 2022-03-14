@@ -40,20 +40,23 @@ section {
   background-color: white;
   opacity: 0.8;
 }
+.changeteamname {
+  font-size: 18px;
+  color: black;
+}
 
 section h2,
 section p {
   text-align: center;
   color: #d52f2f;
-  font-family: 'Caveat', cursive;
-  /* text-decoration: underline; */
-  font-size: 60px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
 }
 
 section h3 {
   margin: 1rem 0;
   font-family: Monospace;
-  font-size: 4rem;
+  font-size: 7rem;
   color: #111;
   /* font-family: 'Cairo', sans-serif; */
 
