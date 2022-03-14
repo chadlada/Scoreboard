@@ -18,6 +18,7 @@ const teamTwoNameText = document.querySelector('.team2 h2')
 
 let teamTwoScore = 0
 
+const resetButton = document.querySelector('.reset')
 // ------------------------------------------TEAM 1 BUTTON FUNCTION------------------------------------------
 
 function handleClickTeamOnePlusButton() {
@@ -118,3 +119,27 @@ function teamTwoInputChanged(event: Event) {
 }
 
 teamTwoNameInput?.addEventListener('input', teamTwoInputChanged)
+
+// ------------------------------------------RESET BUTTON------------------------------------------
+
+function handleClickResetButton() {
+  teamOneScore = 0
+  teamTwoScore = 0
+
+  if (teamOneScoreText) {
+    teamOneScoreText.textContent = `${teamOneScore}`
+  }
+
+  if (teamTwoScoreText) {
+    teamTwoScoreText.textContent = `${teamTwoScore}`
+  }
+
+  // if (teamOneNameText) {
+  //   teamOneNameText.textContent = 'Team 1'
+  // }
+  // if (teamTwoNameText) {
+  //   teamTwoNameText.textContent = 'Team 2'
+  // }
+}
+
+resetButton?.addEventListener('click', handleClickResetButton)

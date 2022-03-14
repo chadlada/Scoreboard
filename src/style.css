@@ -84,3 +84,10 @@ fieldset i.add {
 fieldset i.subtract {
   color: #f64545;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: #d52f2f;
+}
