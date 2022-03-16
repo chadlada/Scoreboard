@@ -11,7 +11,8 @@ body {
   min-height: 100%;
   background-color: #f1e6eb;
   color: #d0cdcd;
-  background-image: url(images/baseball.jpg);
+  background-image: url(/images/baseball.jpg);
+  /* background: url("background1.png") auto 749px; */
 }
 
 h1 {
@@ -42,7 +43,7 @@ section {
 }
 .changeteamname {
   font-size: 18px;
-  color: black;
+  color: rgb(221, 34, 34);
 }
 
 section h2,
@@ -59,8 +60,7 @@ section h3 {
   font-size: 7rem;
   color: #111;
   /* font-family: 'Cairo', sans-serif; */
-
-  font-family: 'Homemade Apple', cursive;
+  /* font-family: 'Homemade Apple', cursive; */
 }
 
 fieldset {
@@ -88,6 +88,9 @@ fieldset i.subtract {
 footer {
   display: flex;
   justify-content: center;
+}
+footer button {
   font-size: 2rem;
   color: #d52f2f;
+  text-transform: uppercase;
 }

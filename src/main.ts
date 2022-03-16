@@ -17,8 +17,11 @@ const teamTwoNameInput = document.querySelector('.team2 input')
 const teamTwoNameText = document.querySelector('.team2 h2')
 
 let teamTwoScore = 0
+const freshInputs = document.querySelectorAll('input')!
 
 const resetButton = document.querySelector('.reset')
+freshInputs.forEach((input) => (input.value = ''))
+
 // ------------------------------------------TEAM 1 BUTTON FUNCTION------------------------------------------
 
 function handleClickTeamOnePlusButton() {
@@ -28,7 +31,7 @@ function handleClickTeamOnePlusButton() {
     return
   }
 
-  if (teamOneScore >= 21) {
+  if (teamOneScore === 21) {
     window.alert('Winner winner chicken dinner!')
   }
 
@@ -54,7 +57,7 @@ function handleClickTeamOneMinusButton() {
 
 teamOneMinusButton?.addEventListener('click', handleClickTeamOneMinusButton)
 
-// ------------------------------------------TEAM 1 INPUT FUNCTION------------------------------------------
+// ------------------------------------------TEAM 1 NAME INPUT FUNCTION------------------------------------------
 
 function teamOneInputChanged(event: Event) {
   const inputThatChanged = event.target
@@ -73,15 +76,14 @@ teamOneNameInput?.addEventListener('input', teamOneInputChanged)
 // ------------------------------------------TEAM 2 BUTTON FUNCTION------------------------------------------
 
 function handleClickTeamTwoPlusButton() {
+  teamTwoScore++
   if (teamTwoScore > 21) {
     return
   }
 
-  if (teamTwoScore >= 21) {
+  if (teamTwoScore === 21) {
     window.alert('Winner winner chicken dinner!')
   }
-
-  teamTwoScore++
 
   if (teamTwoScoreText) {
     teamTwoScoreText.textContent = `${teamTwoScore}`
@@ -104,7 +106,7 @@ function handleClickTeamTwoMinusButton() {
 }
 teamTwoMinusButton?.addEventListener('click', handleClickTeamTwoMinusButton)
 
-// ------------------------------------------TEAM 2 INPUT FUNCTION------------------------------------------
+// ------------------------------------------TEAM 2 NAME INPUT FUNCTION------------------------------------------
 
 function teamTwoInputChanged(event: Event) {
   const inputThatChanged = event.target
@@ -123,6 +125,7 @@ teamTwoNameInput?.addEventListener('input', teamTwoInputChanged)
 // ------------------------------------------RESET BUTTON------------------------------------------
 
 function handleClickResetButton() {
+  freshInputs.forEach((input) => (input.value = ''))
   teamOneScore = 0
   teamTwoScore = 0
 
@@ -134,12 +137,12 @@ function handleClickResetButton() {
     teamTwoScoreText.textContent = `${teamTwoScore}`
   }
 
-  // if (teamOneNameText) {
-  //   teamOneNameText.textContent = 'Team 1'
-  // }
-  // if (teamTwoNameText) {
-  //   teamTwoNameText.textContent = 'Team 2'
-  // }
+  if (teamOneNameText) {
+    teamOneNameText.textContent = 'Team 1'
+  }
+  if (teamTwoNameText) {
+    teamTwoNameText.textContent = 'Team 2'
+  }
 }
 
 resetButton?.addEventListener('click', handleClickResetButton)
